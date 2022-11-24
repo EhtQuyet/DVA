@@ -1,0 +1,188 @@
+.createVoter__container {
+  width: 95%;
+  margin: 0 auto;
+  margin-block: 2rem;
+  display: grid;
+
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 2rem;
+}
+
+.voter {
+  background-color: #231e39;
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  color: #b3b8cd;
+  padding: 2rem;
+}
+
+.voter__container__box {
+  text-align: center;
+  border: 1px dotted #8BC6EC;
+  border-radius: 5px;
+}
+
+.voter__container__box p {
+  line-height: .5;
+}
+
+/*input style*/
+.input__container {
+  padding-top: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.voterInfo {
+  position: absolute;
+  top: 12rem;
+  left: 3rem;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  background-color: #231e39;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  color: #b3b8cd;
+  text-align: start;
+}
+
+.voterInfo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.voterInfo__paragraph {
+  background-color: #231e39;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  color: #b3b8cd;
+  height: 9rem;
+  padding: 1rem;
+}
+
+.voterInfo__paragraph p {
+  line-height: 1rem;
+}
+
+.voterInfo__paragraph p span {
+  font-size: 12px;
+}
+
+/*Side info */
+.sideInfo {
+  background-color: #231e39;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  color: #b3b8cd;
+}
+
+.sideInfo__box h4 {
+  background-color: #8BC6EC;
+  padding: .5rem;
+  border-radius: .2rem;
+  color: #000000;
+}
+
+.sideInfo__para {
+  background-color: #8BC6EC;
+  padding: .5rem;
+  border-radius: .2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card__box {
+  line-height: 1;
+  border: 1px solid #8BC6EC;
+  padding: .2rem;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  border-radius: .3rem;
+}
+
+.image img {
+  width: 100%;
+}
+
+/*user list*/
+
+.createdVoter {
+  background-color: #231e39;
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  color: #b3b8cd;
+  padding: 2rem;
+}
+
+.createdVoter__info {
+
+}
+
+.createdVoter__info img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.card__info {
+
+}
+
+
+.voter__container {
+
+}
+
+.voter__container__box__div {
+
+}
+
+.voter__container__box__div__info {
+
+}
+
+.voter__container__box__div__image {
+}
+
+.voter__container__box__div__image img {
+  border-radius: 50%;
+}
+
+.button {
+  text-align: end;
+}
+
+/*media responsive*/
+@media screen and (max-width: 45em) {
+  .createVoter__container {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .voter {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .input__container {
+    width: 100%
+  }
+
+  .voterInfo {
+    width: 12rem;
+    height: 12rem;
+    top: 2rem;
+    left: 0rem;
+    cursor: pointer;
+  }
+
+  .voterInfo__paragraph {
+    font-size: 12px;
+    height: 7.5rem;
+  }
+}
