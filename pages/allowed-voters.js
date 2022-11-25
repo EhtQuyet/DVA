@@ -8,6 +8,7 @@ import Image from 'next/image'
 import {VotingContext} from "../context/Voter";
 import Styles from '../styles/allowedVoter.module.css'
 import CREATOR from '../assets/images/creator.png'
+import UPLOAD_IMAGE from '../assets/images/images.png'
 import Button from '../components/Button/Button'
 import Input from '../components/Input/Input'
 
@@ -21,12 +22,13 @@ function AllowedVoters() {
   });
 
   const router = useRouter();
-  const {uploadToIPFS} = useContext(VotingContext);
+  const {uploadToIPFS, createVoter} = useContext(VotingContext);
 
   //-----voters image drop
 
   const onDrop = useCallback(async (acceptedFil) => {
     const url = await uploadToIPFS(acceptedFil[0]);
+    console.log(url)
     setFileUrl(url);
   })
 
@@ -36,11 +38,11 @@ function AllowedVoters() {
     maxSize: 5000000
   });
 
-
+  console.log(fileUrl)
   return (
       <div className={Styles.createVoter__container}>
         <div>
-          {!fileUrl &&
+          {fileUrl &&
           <div className={Styles.voterInfo}>
             <img src={fileUrl} alt="Voter Imge"/>
             <div className={Styles.voterInfo__paragraph}>
@@ -98,7 +100,7 @@ function AllowedVoters() {
                     <p>Upload File: JPG, PNG, GIF, WEBM Max 10MB </p>
                     <div className={Styles.voter__container__box__div__image}>
                       <Image
-                          src={CREATOR}
+                          src={UPLOAD_IMAGE}
                           width={150}
                           height={150}
                           objectFit="contain"
@@ -141,8 +143,7 @@ function AllowedVoters() {
             <div className={Styles.button}>
               <Button
                   btnName="Authorized Voter"
-                  handleClick={() => {
-                  }}
+                  handleClick={() => createVoter(formInput, fileUrl, router)}
               />
             </div>
           </div>

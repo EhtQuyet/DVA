@@ -88,6 +88,7 @@
 .sideInfo__para {
   background-color: #8BC6EC;
   padding: .5rem;
+  color: black;
   border-radius: .2rem;
 }
 
@@ -112,6 +113,14 @@
 /*user list*/
 
 .createdVoter {
+  /*background-color: #231e39;*/
+  /*border-radius: 25px;*/
+  /*box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);*/
+  /*color: #b3b8cd;*/
+  /*padding: 2rem;*/
+}
+
+.createdVoter__info {
   background-color: #231e39;
   border-radius: 25px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
@@ -119,13 +128,9 @@
   padding: 2rem;
 }
 
-.createdVoter__info {
-
-}
-
 .createdVoter__info img {
   border-radius: 50%;
-  width: 200px;
+  width: 100%;
   height: 200px;
 }
 
@@ -150,7 +155,7 @@
 }
 
 .voter__container__box__div__image img {
-  border-radius: 50%;
+  border-radius: 25px;
 }
 
 .button {
